@@ -14,7 +14,7 @@ function App() {
     }
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/business-data', formData);
+      const response = await axios.post('https://growth-pro-ai-kappa.vercel.app/business-data', formData);
       setBusinessData(response.data);
     } catch (error) {
       console.error('Error fetching business data:', error);
@@ -27,7 +27,7 @@ function App() {
   const handleRegenerate = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/regenerate-headline', {
+      const response = await axios.get('https://growth-pro-ai-kappa.vercel.app/regenerate-headline', {
         params: formData,
       });
       setBusinessData({ ...businessData, headline: response.data.headline });
