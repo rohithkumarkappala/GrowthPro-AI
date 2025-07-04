@@ -1,0 +1,7 @@
+@import "tailwindcss";
+/* In index.css */
+@media (max-width: 640px) {
+  .container {
+    padding: 0.5rem;
+  }
+}
